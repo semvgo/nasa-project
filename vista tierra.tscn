@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://x83f7hqrh0vp"]
+
+[ext_resource type="Texture2D" uid="uid://cgmagn2pvm65n" path="res://suel concreto.jpg" id="1_pndjc"]
+[ext_resource type="Texture2D" uid="uid://dkvq6pkelob3n" path="res://images-removebg-preview.png" id="2_2gmej"]
+[ext_resource type="Script" uid="uid://oryphahu65o0" path="res://cohetedesdetierra.gd" id="3_2gmej"]
+[ext_resource type="AudioStream" uid="uid://da6bctm66aa4y" path="res://49053354-rocket-launch-306441.mp3" id="4_myt0b"]
+
+[node name="Node2D" type="Node2D" unique_id=1473062429]
+
+[node name="fondo" type="Sprite2D" parent="." unique_id=1329598632]
+scale = Vector2(-3.2481492, 2.8184116)
+texture = ExtResource("1_pndjc")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1448958981]
+position = Vector2(-4, 0)
+scale = Vector2(1.160001, 1)
+
+[node name="cohetedesdetierra" type="Sprite2D" parent="." unique_id=589327320]
+position = Vector2(0, 100)
+rotation = -1.5819746
+scale = Vector2(0.68136203, 0.8000134)
+texture = ExtResource("2_2gmej")
+script = ExtResource("3_2gmej")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2030705551]
+stream = ExtResource("4_myt0b")
+max_distance = 2162.0
+attenuation = 0.6155715

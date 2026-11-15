@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dcqbiqanustmu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wpbk6"]
+
+[node name="misiones" type="Control" unique_id=2020065519]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="." unique_id=2119639710]
+layout_mode = 0
+offset_right = 361.0
+offset_bottom = 134.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_wpbk6")
+text = "MISSIONS"

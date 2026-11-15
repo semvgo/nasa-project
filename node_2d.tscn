@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://c07mw1xmqv7sw"]
 
+[ext_resource type="PackedScene" uid="uid://c7x70tc8xe6rb" path="res://interfazelegir cohete.tscn" id="1_4d7sh"]
 [ext_resource type="Texture2D" uid="uid://dexkih6rdl2hv" path="res://Captura de pantalla 2026-11-14 123957.png" id="1_epypp"]
 [ext_resource type="Texture2D" uid="uid://ddr26gmchbkyy" path="res://ca18a14b-2491-497e-aa3d-37bb11d17aa6-removebg-preview.png" id="2_0hol4"]
 [ext_resource type="Script" uid="uid://23f6aepkp7qb" path="res://tierra.gd" id="3_q6r6c"]
@@ -10,6 +11,8 @@
 [ext_resource type="Script" uid="uid://br5tsyha71hv1" path="res://cohete.gd" id="8_4d7sh"]
 
 [node name="Node2D" type="Node2D" unique_id=1583194616]
+
+[node name="Control" parent="." unique_id=1282298026 instance=ExtResource("1_4d7sh")]
 
 [node name="espacio" type="Sprite2D" parent="." unique_id=135528357]
 position = Vector2(-2402, 136)
@@ -23,8 +26,8 @@ texture = ExtResource("2_0hol4")
 script = ExtResource("3_q6r6c")
 
 [node name="mercurio" type="Sprite2D" parent="." unique_id=1117896738]
-position = Vector2(-7501, -1387.9999)
-scale = Vector2(-9.883127, -8.377739)
+position = Vector2(-7501, -1428.4357)
+scale = Vector2(-9.883127, -9.194624)
 texture = ExtResource("4_kdubu")
 region_enabled = true
 region_rect = Rect2(24, 25.5, 94, 99)

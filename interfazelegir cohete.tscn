@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://c7x70tc8xe6rb"]
+
+[ext_resource type="Script" uid="uid://mex2avpt0kmn" path="res://elegi_tu_cohete.gd" id="1_57glk"]
+[ext_resource type="Texture2D" uid="uid://dkvq6pkelob3n" path="res://images-removebg-preview.png" id="1_72akw"]
+[ext_resource type="Texture2D" uid="uid://dic7ijudvxar2" path="res://rocket-removebg-preview.png" id="2_m2gxg"]
+[ext_resource type="Texture2D" uid="uid://dtruk8dm4a3nc" path="res://monedita-removebg-preview.png" id="3_m2gxg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8fwgs"]
+bg_color = Color(0.67466736, 0.709056, 0.93359375, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wpbk6"]
+bg_color = Color(0.30078125, 0.34448242, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g1m5i"]
+bg_color = Color(0.10595703, 0.42276382, 0.96875, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="Control" type="Control" unique_id=1282298026]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="elegi_tu_cohete" type="Panel" parent="." unique_id=1769958828]
+layout_mode = 0
+offset_left = -578.0
+offset_top = -324.0
+offset_right = 571.0
+offset_bottom = 317.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8fwgs")
+script = ExtResource("1_57glk")
+
+[node name="texto" type="Label" parent="elegi_tu_cohete" unique_id=2142080657]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.61600006
+anchor_bottom = 0.23400001
+offset_left = 139.0
+offset_top = 29.0
+offset_right = 327.21594
+offset_bottom = 156.006
+theme_override_colors/font_color = Color(0, 0.21026611, 0.5078125, 1)
+theme_override_font_sizes/font_size = 100
+text = "Chose your Rocket"
+
+[node name="cohete1" type="Panel" parent="elegi_tu_cohete" unique_id=1587183418]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.017
+anchor_bottom = 0.031000001
+offset_left = 257.0
+offset_top = 232.0
+offset_right = 485.467
+offset_bottom = 483.129
+theme_override_styles/panel = SubResource("StyleBoxFlat_wpbk6")
+
+[node name="imagencohete1" type="TextureRect" parent="elegi_tu_cohete/cohete1" unique_id=217337506]
+layout_mode = 0
+offset_left = -30.0
+offset_top = -69.0
+offset_right = 270.0
+offset_bottom = 183.0
+texture = ExtResource("1_72akw")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="botoncohete1" type="Button" parent="elegi_tu_cohete/cohete1" unique_id=47512265]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.57900006
+anchor_top = 0.93200004
+anchor_right = 0.57900006
+anchor_bottom = 0.93200004
+offset_left = -108.59201
+offset_top = -102.57201
+offset_right = 75.40799
+offset_bottom = -11.572006
+theme_override_colors/font_color = Color(0.02734375, 0.0056610107, 0.0056610107, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_g1m5i")
+text = "use"
+
+[node name="cohete2" type="Panel" parent="elegi_tu_cohete" unique_id=1698440687]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.017
+anchor_bottom = 0.031000001
+offset_left = 647.0
+offset_top = 235.0
+offset_right = 875.467
+offset_bottom = 486.129
+theme_override_styles/panel = SubResource("StyleBoxFlat_wpbk6")
+
+[node name="imagencohete2" type="TextureRect" parent="elegi_tu_cohete/cohete2" unique_id=1241875821]
+layout_mode = 0
+offset_left = 223.0
+offset_top = -10.0
+offset_right = 404.0
+offset_bottom = 203.0
+rotation = 1.5888222
+texture = ExtResource("2_m2gxg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="botoncohete2" type="Button" parent="elegi_tu_cohete/cohete2" unique_id=37099457]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.57900006
+anchor_top = 0.93200004
+anchor_right = 0.57900006
+anchor_bottom = 0.93200004
+offset_left = -109.59201
+offset_top = -102.57201
+offset_right = 74.40799
+offset_bottom = -11.572006
+theme_override_colors/font_color = Color(0.02734375, 0.0056610107, 0.0056610107, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_g1m5i")
+text = "     10   "
+
+[node name="TextureRect" type="TextureRect" parent="elegi_tu_cohete/cohete2" unique_id=874205129]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 155.0
+offset_right = 80.0
+offset_bottom = 195.0
+scale = Vector2(2.1026552, 2.115953)
+texture = ExtResource("3_m2gxg")
+expand_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1852734754]
+position = Vector2(-3, -5)
