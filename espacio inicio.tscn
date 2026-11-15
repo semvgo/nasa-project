@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://8ns1g0142bjf"]
 
+[ext_resource type="Script" uid="uid://df7na5bg3dtay" path="res://global.gd" id="1_84ekw"]
 [ext_resource type="Texture2D" uid="uid://dexkih6rdl2hv" path="res://Captura de pantalla 2026-11-14 123957.png" id="1_eudrk"]
 [ext_resource type="Texture2D" uid="uid://ddr26gmchbkyy" path="res://ca18a14b-2491-497e-aa3d-37bb11d17aa6-removebg-preview.png" id="2_aaghl"]
 [ext_resource type="Script" uid="uid://23f6aepkp7qb" path="res://tierra.gd" id="3_84ekw"]
@@ -26,6 +27,7 @@ radius = 45.587334
 radius = 95.33633
 
 [node name="Node2D" type="Node2D" unique_id=1583194616]
+script = ExtResource("1_84ekw")
 
 [node name="espacio" type="Sprite2D" parent="." unique_id=135528357]
 position = Vector2(-2403.9998, 136)
@@ -84,22 +86,9 @@ shape = SubResource("CircleShape2D_r34kd")
 scale = Vector2(0.9999999, 1)
 script = ExtResource("9_aaghl")
 
-[node name="Cohete" type="Sprite2D" parent="jugador" unique_id=2092753215]
-scale = Vector2(1.3680001, 1.237)
-texture = ExtResource("7_1dmnw")
-script = ExtResource("8_ckb12")
-
-[node name="Camera2D" type="Camera2D" parent="jugador/Cohete" unique_id=72322834]
-offset = Vector2(10, 10)
-zoom = Vector2(0.5, 0.5)
-position_smoothing_enabled = true
-rotation_smoothing_enabled = true
-
 [node name="CanvasLayer" type="CanvasLayer" parent="jugador" unique_id=892835073]
-visible = false
 
 [node name="Label" type="Label" parent="jugador/CanvasLayer" unique_id=1771845088]
-visible = false
 anchors_preset = -1
 anchor_left = -0.707
 anchor_top = -1.0250001
@@ -110,7 +99,19 @@ offset_top = 0.20007324
 offset_right = -0.47998047
 offset_bottom = 0.14404297
 theme_override_font_sizes/font_size = 80
-text = "ATERRIZAJE"
+text = "ATERRIZAJE presione enter
+"
+
+[node name="Cohete" type="Sprite2D" parent="jugador" unique_id=2092753215]
+scale = Vector2(1.3680001, 1.237)
+texture = ExtResource("7_1dmnw")
+script = ExtResource("8_ckb12")
+
+[node name="Camera2D" type="Camera2D" parent="jugador/Cohete" unique_id=72322834]
+offset = Vector2(10, 10)
+zoom = Vector2(0.5, 0.5)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="jugador" unique_id=1514579472]
 position = Vector2(39.000004, 34)
