@@ -8,7 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://bdvkyfuujh4ej" path="res://Captura_de_pantalla_2026-11-14_130152-removebg-preview.png" id="5_d21ai"]
 [ext_resource type="Texture2D" uid="uid://bc2e03yvkp40f" path="res://Captura_de_pantalla_2026-11-14_130155-removebg-preview.png" id="6_rj586"]
 [ext_resource type="Texture2D" uid="uid://dkvq6pkelob3n" path="res://images-removebg-preview.png" id="7_rj586"]
-[ext_resource type="Script" uid="uid://br5tsyha71hv1" path="res://cohete.gd" id="8_4d7sh"]
+
+[sub_resource type="GDScript" id="GDScript_rj586"]
+script/source = "extends Sprite2D
+"
 
 [node name="Node2D" type="Node2D" unique_id=1583194616]
 
@@ -49,7 +52,7 @@ script = ExtResource("3_q6r6c")
 position = Vector2(-836.9999, -1074)
 scale = Vector2(1.368, 1.237)
 texture = ExtResource("7_rj586")
-script = ExtResource("8_4d7sh")
+script = SubResource("GDScript_rj586")
 
 [node name="Camera2D" type="Camera2D" parent="cohete" unique_id=72322834]
 offset = Vector2(10, 10)

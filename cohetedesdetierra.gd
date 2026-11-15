@@ -1,7 +1,9 @@
 extends Sprite2D
+
 var velocity_y = -2
 var despegando = false
-func _process(delta):
+
+func _process(_delta):
 	if Input.is_action_just_pressed("ui_accept") and despegando == false:
 		despegando = true
 		$"../AudioStreamPlayer2D".play()
@@ -10,7 +12,5 @@ func _process(delta):
 			position.y += velocity_y
 			if position.y <= -300.0:
 				$"../AudioStreamPlayer2D".stop()
+				get_tree().change_scene_to_file("res://espacio inicio.tscn")
 				break
-
-			
-		

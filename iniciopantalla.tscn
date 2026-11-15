@@ -15,25 +15,27 @@ grow_vertical = 2
 [node name="Panel" type="Panel" parent="." unique_id=1021611141]
 modulate = Color(0.64453125, 0.9666748, 1, 1)
 layout_mode = 0
-offset_right = 1152.0
+offset_right = 1305.0
 offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_8fwgs")
 script = ExtResource("1_k2ise")
 
 [node name="Label" type="Label" parent="Panel" unique_id=1460776419]
 layout_mode = 0
-offset_left = 407.0
-offset_top = 15.0
-offset_right = 781.0
-offset_bottom = 158.0
+offset_left = -11.0
+offset_top = 36.0
+offset_right = 1100.0
+offset_bottom = 528.0
 theme_override_font_sizes/font_size = 118
-text = "NAME"
+text = "Mission endurance:
+ three worlds,
+ three journeys"
 
 [node name="Button" type="Button" parent="Panel" unique_id=1183919220]
 layout_mode = 0
-offset_left = 394.0
-offset_top = 266.0
-offset_right = 781.0
-offset_bottom = 396.0
+offset_left = 847.0
+offset_top = 240.0
+offset_right = 1234.0
+offset_bottom = 370.0
 theme_override_font_sizes/font_size = 65
 text = "PLAY"
