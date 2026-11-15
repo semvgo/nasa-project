@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://ca6071bhsuug4"]
+
+[ext_resource type="Script" uid="uid://ccqxs5l8rt510" path="res://panel.gd" id="1_k2ise"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8fwgs"]
+
+[node name="Control" type="Control" unique_id=1787380832]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1021611141]
+modulate = Color(0.64453125, 0.9666748, 1, 1)
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8fwgs")
+script = ExtResource("1_k2ise")
+
+[node name="Label" type="Label" parent="Panel" unique_id=1460776419]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 15.0
+offset_right = 781.0
+offset_bottom = 158.0
+theme_override_font_sizes/font_size = 118
+text = "NAME"
+
+[node name="Button" type="Button" parent="Panel" unique_id=1183919220]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 266.0
+offset_right = 781.0
+offset_bottom = 396.0
+theme_override_font_sizes/font_size = 65
+text = "PLAY"
