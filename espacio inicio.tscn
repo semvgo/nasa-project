@@ -47,8 +47,8 @@ position = Vector2(2.213393, -6.451245)
 shape = SubResource("CircleShape2D_5m0q7")
 
 [node name="Mercurio" type="Sprite2D" parent="." unique_id=1117896738]
-position = Vector2(-7501, -1387.9999)
-scale = Vector2(-9.883127, -8.377739)
+position = Vector2(-7540.7534, -1369.6521)
+scale = Vector2(-9.0373125, -8.748402)
 texture = ExtResource("4_xbd3h")
 region_enabled = true
 region_rect = Rect2(24, 25.5, 94, 99)
@@ -61,8 +61,8 @@ position = Vector2(-0.60709524, 2.0292015)
 shape = SubResource("CircleShape2D_d4dkj")
 
 [node name="Venus" type="Sprite2D" parent="." unique_id=668828620]
-position = Vector2(-3517.9995, 1454)
-scale = Vector2(5.8465133, 6.5932913)
+position = Vector2(-3496.5881, 1454)
+scale = Vector2(6.1810646, 6.5932913)
 texture = ExtResource("5_csiac")
 script = ExtResource("3_84ekw")
 
