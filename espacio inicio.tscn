@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://8ns1g0142bjf"]
+
+[ext_resource type="Texture2D" uid="uid://dexkih6rdl2hv" path="res://Captura de pantalla 2026-11-14 123957.png" id="1_eudrk"]
+[ext_resource type="Texture2D" uid="uid://ddr26gmchbkyy" path="res://ca18a14b-2491-497e-aa3d-37bb11d17aa6-removebg-preview.png" id="2_aaghl"]
+[ext_resource type="Script" uid="uid://23f6aepkp7qb" path="res://tierra.gd" id="3_84ekw"]
+[ext_resource type="Texture2D" uid="uid://coufm3imbhxt5" path="res://Captura_de_pantalla_2026-11-14_130148-removebg-preview.png" id="4_xbd3h"]
+[ext_resource type="Texture2D" uid="uid://bdvkyfuujh4ej" path="res://Captura_de_pantalla_2026-11-14_130152-removebg-preview.png" id="5_csiac"]
+[ext_resource type="Texture2D" uid="uid://bc2e03yvkp40f" path="res://Captura_de_pantalla_2026-11-14_130155-removebg-preview.png" id="6_o64lj"]
+[ext_resource type="Texture2D" uid="uid://dkvq6pkelob3n" path="res://images-removebg-preview.png" id="7_1dmnw"]
+[ext_resource type="Script" uid="uid://br5tsyha71hv1" path="res://cohete.gd" id="8_ckb12"]
+
+[node name="Node2D" type="Node2D" unique_id=1583194616]
+
+[node name="espacio" type="Sprite2D" parent="." unique_id=135528357]
+position = Vector2(-2402, 136)
+scale = Vector2(25, 25)
+texture = ExtResource("1_eudrk")
+
+[node name="tierra" type="Sprite2D" parent="." unique_id=248696901]
+position = Vector2(-1455, -474.00006)
+scale = Vector2(6.7769213, 6.3553567)
+texture = ExtResource("2_aaghl")
+script = ExtResource("3_84ekw")
+
+[node name="mercurio" type="Sprite2D" parent="." unique_id=1117896738]
+position = Vector2(-7501, -1387.9999)
+scale = Vector2(-9.883127, -8.377739)
+texture = ExtResource("4_xbd3h")
+region_enabled = true
+region_rect = Rect2(24, 25.5, 94, 99)
+script = ExtResource("3_84ekw")
+
+[node name="venus" type="Sprite2D" parent="." unique_id=668828620]
+position = Vector2(-3517.9995, 1454)
+scale = Vector2(5.8465133, 6.5932913)
+texture = ExtResource("5_csiac")
+script = ExtResource("3_84ekw")
+
+[node name="marte" type="Sprite2D" parent="." unique_id=1822266597]
+position = Vector2(2188.9998, 1439)
+scale = Vector2(13.145189, 12.059425)
+texture = ExtResource("6_o64lj")
+script = ExtResource("3_84ekw")
+
+[node name="cohete" type="Sprite2D" parent="." unique_id=2092753215]
+position = Vector2(-836.9999, -1074)
+scale = Vector2(1.368, 1.237)
+texture = ExtResource("7_1dmnw")
+script = ExtResource("8_ckb12")
+
+[node name="Camera2D" type="Camera2D" parent="cohete" unique_id=72322834]
+offset = Vector2(10, 10)
+zoom = Vector2(0.5, 0.5)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
