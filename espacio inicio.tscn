@@ -8,21 +8,43 @@
 [ext_resource type="Texture2D" uid="uid://bc2e03yvkp40f" path="res://Captura_de_pantalla_2026-11-14_130155-removebg-preview.png" id="6_o64lj"]
 [ext_resource type="Texture2D" uid="uid://dkvq6pkelob3n" path="res://images-removebg-preview.png" id="7_1dmnw"]
 [ext_resource type="Script" uid="uid://br5tsyha71hv1" path="res://cohete.gd" id="8_ckb12"]
+[ext_resource type="Script" uid="uid://b6t1655b31tqm" path="res://jugador.gd" id="9_aaghl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5m0q7"]
+radius = 81.601845
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d4dkj"]
+radius = 45.31611
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gbhp4"]
+radius = 58.477047
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r34kd"]
+radius = 45.587334
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_75x0k"]
+radius = 95.33633
 
 [node name="Node2D" type="Node2D" unique_id=1583194616]
 
 [node name="espacio" type="Sprite2D" parent="." unique_id=135528357]
-position = Vector2(-2402, 136)
+position = Vector2(-2403.9998, 136)
 scale = Vector2(25, 25)
 texture = ExtResource("1_eudrk")
 
-[node name="tierra" type="Sprite2D" parent="." unique_id=248696901]
+[node name="Tierra" type="Sprite2D" parent="." unique_id=248696901]
 position = Vector2(-1455, -474.00006)
 scale = Vector2(6.7769213, 6.3553567)
 texture = ExtResource("2_aaghl")
 script = ExtResource("3_84ekw")
 
-[node name="mercurio" type="Sprite2D" parent="." unique_id=1117896738]
+[node name="StaticBody2D" type="StaticBody2D" parent="Tierra" unique_id=2094641952]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tierra/StaticBody2D" unique_id=364888474]
+position = Vector2(2.213393, -6.451245)
+shape = SubResource("CircleShape2D_5m0q7")
+
+[node name="Mercurio" type="Sprite2D" parent="." unique_id=1117896738]
 position = Vector2(-7501, -1387.9999)
 scale = Vector2(-9.883127, -8.377739)
 texture = ExtResource("4_xbd3h")
@@ -30,26 +52,66 @@ region_enabled = true
 region_rect = Rect2(24, 25.5, 94, 99)
 script = ExtResource("3_84ekw")
 
-[node name="venus" type="Sprite2D" parent="." unique_id=668828620]
+[node name="StaticBody2D" type="StaticBody2D" parent="Mercurio" unique_id=625553624]
+position = Vector2(-0.60709524, 2.0292015)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mercurio/StaticBody2D" unique_id=2052981049]
+shape = SubResource("CircleShape2D_d4dkj")
+
+[node name="Venus" type="Sprite2D" parent="." unique_id=668828620]
 position = Vector2(-3517.9995, 1454)
 scale = Vector2(5.8465133, 6.5932913)
 texture = ExtResource("5_csiac")
 script = ExtResource("3_84ekw")
 
-[node name="marte" type="Sprite2D" parent="." unique_id=1822266597]
+[node name="StaticBody2D" type="StaticBody2D" parent="Venus" unique_id=488272689]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Venus/StaticBody2D" unique_id=1339899661]
+shape = SubResource("CircleShape2D_gbhp4")
+
+[node name="Marte" type="Sprite2D" parent="." unique_id=1822266597]
 position = Vector2(2188.9998, 1439)
 scale = Vector2(13.145189, 12.059425)
 texture = ExtResource("6_o64lj")
 script = ExtResource("3_84ekw")
 
-[node name="cohete" type="Sprite2D" parent="." unique_id=2092753215]
-position = Vector2(-836.9999, -1074)
-scale = Vector2(1.368, 1.237)
+[node name="StaticBody2D" type="StaticBody2D" parent="Marte" unique_id=2006073218]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Marte/StaticBody2D" unique_id=805110393]
+shape = SubResource("CircleShape2D_r34kd")
+
+[node name="jugador" type="CharacterBody2D" parent="." unique_id=2123660304]
+scale = Vector2(0.9999999, 1)
+script = ExtResource("9_aaghl")
+
+[node name="Cohete" type="Sprite2D" parent="jugador" unique_id=2092753215]
+scale = Vector2(1.3680001, 1.237)
 texture = ExtResource("7_1dmnw")
 script = ExtResource("8_ckb12")
 
-[node name="Camera2D" type="Camera2D" parent="cohete" unique_id=72322834]
+[node name="Camera2D" type="Camera2D" parent="jugador/Cohete" unique_id=72322834]
 offset = Vector2(10, 10)
 zoom = Vector2(0.5, 0.5)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="jugador" unique_id=892835073]
+visible = false
+
+[node name="Label" type="Label" parent="jugador/CanvasLayer" unique_id=1771845088]
+visible = false
+anchors_preset = -1
+anchor_left = -0.707
+anchor_top = -1.0250001
+anchor_right = -0.38500002
+anchor_bottom = -0.90300006
+offset_left = -0.53601074
+offset_top = 0.20007324
+offset_right = -0.47998047
+offset_bottom = 0.14404297
+theme_override_font_sizes/font_size = 80
+text = "ATERRIZAJE"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jugador" unique_id=1514579472]
+position = Vector2(39.000004, 34)
+shape = SubResource("CircleShape2D_75x0k")
