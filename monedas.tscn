@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bvbqqhbucextk"]
+
+[ext_resource type="Texture2D" uid="uid://dtruk8dm4a3nc" path="res://monedita-removebg-preview.png" id="1_tkcbt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aaghl"]
+bg_color = Color(0, 0.093933105, 0.31640625, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0.061462402, 0.20703125, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="monedas" type="Control" unique_id=1234667235]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=540027157]
+layout_mode = 0
+offset_right = 193.0
+offset_bottom = 85.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_aaghl")
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=119084125]
+layout_mode = 0
+offset_left = -10.0
+offset_top = -11.0
+offset_right = 100.0
+offset_bottom = 95.0
+texture = ExtResource("1_tkcbt")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Panel" unique_id=1021641644]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 7.0
+offset_right = 174.0
+offset_bottom = 76.0
+theme_override_font_sizes/font_size = 50
+text = "0"

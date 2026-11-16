@@ -80,6 +80,8 @@ func _physics_process(delta):
 	hud_ui.text = "⛽ Fuel: " + str(int(Global1.fuel)) + " | 🫧 Oxy: " + str(int(Global1.oxygen)) + " | 📦 Mats: " + str(Global1.materials) + "\n🛡️ Heat: " + h_st + " | 🚀 Grav: " + g_st + " | 📡 Dist: " + str(dist_mkm) + "M km"
 
 	if is_landed:
+		if (current_planet_name == "Tierra" or current_planet_name == "Earth") and Input.is_key_pressed(KEY_C):
+			get_tree().change_scene_to_file("res://interfazelegir cohete.tscn")
 		velocity = Vector2.ZERO
 		if Input.is_action_just_pressed("ui_select"):
 			if not landing_approved:
@@ -111,15 +113,16 @@ func _physics_process(delta):
 	var dir = Vector2.ZERO
 	if Input.is_key_pressed(KEY_D):
 		dir.x += 1
-		$Cohete.flip_h = false
+		$Cohete.rotation_degrees = 0
 	if Input.is_key_pressed(KEY_A):
 		dir.x -= 1
-		$Cohete.flip_h = true
+		$Cohete.rotation_degrees = 180
 	if Input.is_key_pressed(KEY_W):
 		dir.y -= 1
+		$Cohete.rotation_degrees = -90
 	if Input.is_key_pressed(KEY_S):
 		dir.y += 1
-		
+		$Cohete.rotation_degrees = 90
 	if dir != Vector2.ZERO:
 		Global1.fuel -= fuel_consumption * delta
 		velocity = dir.normalized() * movement_speed
@@ -141,6 +144,8 @@ func _physics_process(delta):
 
 	if Input.is_action_just_pressed("ui_select"):
 		mostrar_msg("⚠️ Land on a planet first!", Color.ORANGE)
+		$"../misiones".global_position = global_position + Vector2(-500, -300)
+
 
 func revisar_planeta(key: String):
 	var has_h = Global1.has_heat_shield or Global1.escudo_calor
@@ -152,6 +157,8 @@ func revisar_planeta(key: String):
 		if ok_h and ok_g:
 			landing_approved = true
 			mostrar_msg("✅ LANDED ON " + d["name_en"].to_upper() + " (" + d["gravity"] + ")\n[SPACE]: Deliver | [ENTER]: Take Off (-" + str(d["escape_fuel"]) + " Fuel)", Color.GREEN)
+			if key == "Tierra" or key == "Earth":
+				message_ui.text += " | [C]: Change Ship"
 		else:
 			landing_approved = false
 			var miss = []

@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://8ns1g0142bjf"]
 
-[ext_resource type="Script" uid="uid://df7na5bg3dtay" path="res://global.gd" id="1_84ekw"]
 [ext_resource type="Texture2D" uid="uid://dexkih6rdl2hv" path="res://Captura de pantalla 2026-11-14 123957.png" id="1_eudrk"]
+[ext_resource type="Script" uid="uid://bt7kwkkiabukr" path="res://misiones.gd" id="1_xbd3h"]
 [ext_resource type="Texture2D" uid="uid://ddr26gmchbkyy" path="res://ca18a14b-2491-497e-aa3d-37bb11d17aa6-removebg-preview.png" id="2_aaghl"]
 [ext_resource type="Script" uid="uid://23f6aepkp7qb" path="res://tierra.gd" id="3_84ekw"]
 [ext_resource type="Texture2D" uid="uid://coufm3imbhxt5" path="res://Captura_de_pantalla_2026-11-14_130148-removebg-preview.png" id="4_xbd3h"]
 [ext_resource type="Texture2D" uid="uid://bdvkyfuujh4ej" path="res://Captura_de_pantalla_2026-11-14_130152-removebg-preview.png" id="5_csiac"]
 [ext_resource type="Texture2D" uid="uid://bc2e03yvkp40f" path="res://Captura_de_pantalla_2026-11-14_130155-removebg-preview.png" id="6_o64lj"]
 [ext_resource type="Texture2D" uid="uid://dkvq6pkelob3n" path="res://images-removebg-preview.png" id="7_1dmnw"]
-[ext_resource type="Script" uid="uid://br5tsyha71hv1" path="res://cohete.gd" id="8_ckb12"]
 [ext_resource type="Script" uid="uid://b6t1655b31tqm" path="res://jugador.gd" id="9_aaghl"]
+[ext_resource type="PackedScene" uid="uid://bvbqqhbucextk" path="res://monedas.tscn" id="10_84ekw"]
+[ext_resource type="PackedScene" uid="uid://dcqbiqanustmu" path="res://misiones.tscn" id="11_csiac"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5m0q7"]
 radius = 81.601845
@@ -27,7 +28,7 @@ radius = 45.587334
 radius = 95.33633
 
 [node name="Node2D" type="Node2D" unique_id=1583194616]
-script = ExtResource("1_84ekw")
+script = ExtResource("1_xbd3h")
 
 [node name="espacio" type="Sprite2D" parent="." unique_id=135528357]
 position = Vector2(56, 15)
@@ -105,11 +106,14 @@ theme_override_font_sizes/font_size = 80
 text = "ATERRIZAJE presione enter
 "
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jugador" unique_id=1514579472]
+position = Vector2(773.00006, -168)
+shape = SubResource("CircleShape2D_75x0k")
+
 [node name="Cohete" type="Sprite2D" parent="jugador" unique_id=2092753215]
 position = Vector2(739.99994, -195)
 scale = Vector2(1.3680001, 1.237)
 texture = ExtResource("7_1dmnw")
-script = ExtResource("8_ckb12")
 
 [node name="Camera2D" type="Camera2D" parent="jugador/Cohete" unique_id=72322834]
 position = Vector2(19.736816, 32.33618)
@@ -118,6 +122,21 @@ zoom = Vector2(0.5, 0.5)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="jugador" unique_id=1514579472]
-position = Vector2(773.00006, -168)
-shape = SubResource("CircleShape2D_75x0k")
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1672764826]
+script = ExtResource("1_xbd3h")
+
+[node name="monedas" parent="CanvasLayer" unique_id=1234667235 instance=ExtResource("10_84ekw")]
+offset_left = 131.0
+offset_top = 537.0
+offset_right = 131.0
+offset_bottom = 537.0
+scale = Vector2(1.112697, 1.0520697)
+pivot_offset = Vector2(831.60376, 48.18182)
+script = ExtResource("1_xbd3h")
+
+[node name="misiones" parent="CanvasLayer" unique_id=2020065519 instance=ExtResource("11_csiac")]
+offset_left = 912.99994
+offset_top = 12.000004
+offset_right = 913.0
+offset_bottom = 12.0
+scale = Vector2(0.6000004, 0.6)
