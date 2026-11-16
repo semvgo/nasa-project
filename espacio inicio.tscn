@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://dkvq6pkelob3n" path="res://images-removebg-preview.png" id="7_1dmnw"]
 [ext_resource type="Script" uid="uid://b6t1655b31tqm" path="res://jugador.gd" id="9_aaghl"]
 [ext_resource type="PackedScene" uid="uid://bvbqqhbucextk" path="res://monedas.tscn" id="10_84ekw"]
-[ext_resource type="PackedScene" uid="uid://dcqbiqanustmu" path="res://misiones.tscn" id="11_csiac"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5m0q7"]
 radius = 81.601845
@@ -133,10 +132,3 @@ offset_bottom = 537.0
 scale = Vector2(1.112697, 1.0520697)
 pivot_offset = Vector2(831.60376, 48.18182)
 script = ExtResource("1_xbd3h")
-
-[node name="misiones" parent="CanvasLayer" unique_id=2020065519 instance=ExtResource("11_csiac")]
-offset_left = 912.99994
-offset_top = 12.000004
-offset_right = 913.0
-offset_bottom = 12.0
-scale = Vector2(0.6000004, 0.6)
