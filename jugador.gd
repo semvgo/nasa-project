@@ -39,7 +39,7 @@ func _ready():
 		initial_materials = Global1.materials
 		
 		var p1 = "res://images-removebg-preview.png"
-		var p2 = "res://rocket-removebg-preview.png"
+		var p2 = "res://rocket-removebg-preview (2).png"
 		var tex_original_size = $Cohete.texture.get_size() if $Cohete.texture != null else Vector2(200, 200)
 		var escala_original = $Cohete.scale
 		

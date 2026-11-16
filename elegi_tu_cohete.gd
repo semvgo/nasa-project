@@ -38,10 +38,12 @@ func boton2_Pressed():
 
 func usar_cohete_2():
 	Global1.selected_ship = 2
+	Global1.cambiar_Textura.emit()
+
 	# El cohete 2 mejorado incluye Escudo de Calor y Propulsores de Gravedad (aterriza en Venus y Mercurio)
 	Global1.has_heat_shield = true
 	Global1.has_gravity_thrusters = true
-	cambiar_Textura.emit("res://rocket-removebg-preview.png")
+	cambiar_Textura.emit("res://rocket-removebg-preview (2).png")
 	get_tree().change_scene_to_file("res://vista tierra.tscn")
 
 func actualizar_texto_monedas():

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://mex2avpt0kmn" path="res://elegi_tu_cohete.gd" id="1_57glk"]
 [ext_resource type="Texture2D" uid="uid://dkvq6pkelob3n" path="res://images-removebg-preview.png" id="1_72akw"]
-[ext_resource type="Texture2D" uid="uid://dic7ijudvxar2" path="res://rocket-removebg-preview.png" id="2_m2gxg"]
+[ext_resource type="Texture2D" uid="uid://dlpq1w8mblx1s" path="res://rocket-removebg-preview (2).png" id="3_57glk"]
 [ext_resource type="Texture2D" uid="uid://dtruk8dm4a3nc" path="res://monedita-removebg-preview.png" id="3_m2gxg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8fwgs"]
@@ -118,13 +118,13 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_wpbk6")
 
 [node name="imagencohete2" type="TextureRect" parent="elegi_tu_cohete/cohete2" unique_id=1241875821]
 layout_mode = 0
-offset_left = 223.0
-offset_top = -10.0
-offset_right = 404.0
-offset_bottom = 203.0
-rotation = 1.5888222
-texture = ExtResource("2_m2gxg")
-expand_mode = 1
+offset_left = 9.9999695
+offset_top = -15.0
+offset_right = 289.99997
+offset_bottom = 245.0
+rotation = -0.01755178
+scale = Vector2(0.7193433, 0.7403804)
+texture = ExtResource("3_57glk")
 stretch_mode = 6
 
 [node name="botoncohete2" type="Button" parent="elegi_tu_cohete/cohete2" unique_id=37099457]

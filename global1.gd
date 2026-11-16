@@ -1,4 +1,5 @@
 extends Node
+signal cambiar_Textura
 
 # Recursos principales (English)
 var selected_ship = 1
